@@ -18,7 +18,7 @@ jobs:
           usedocker : true
           dontuseforce: true
           docker_heroku_process_type : worker
-      - env:
+        env:
           PUID: 0
           PGID: 0
           TZ: "Europe/London"
