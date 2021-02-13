@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  container:
+  vm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
