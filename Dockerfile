@@ -7,15 +7,33 @@ ARG QBITTORRENT_VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="sparklyballs, thelamer"
 
+RUN mkdir config
+
+RUN mkdir downloads
+
+RUN mkdir data
+
+RUN mkdir watch
+
+
+
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config" \
-PUID=0 \
-PGID=0 \
-TZ=Europe/London \
-WEBUI_PORT=80 \
 XDG_CONFIG_HOME="/config" \
 XDG_DATA_HOME="/config"
+
+ENV PUID=0 
+
+ENV PGID=0 
+
+ENV TZ=Europe/London 
+
+ENV WEBUI_PORT=80 
+
+
+
+
 
 # add repo and install qbitorrent
 RUN \
