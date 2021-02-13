@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  container:
+    runs-on: ghcr.io/linuxserver/baseimage-ubuntu:bionic
     steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.10.9 # This is the action
