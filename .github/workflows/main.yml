@@ -7,7 +7,7 @@ on:
 
 jobs:
   container:
-    runs-on: ghcr.io/linuxserver/baseimage-ubuntu:bionic
+    runs-on: ubuntu:bionic
     steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.10.9 # This is the action
