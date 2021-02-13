@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  vm:
+  container:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,3 +18,8 @@ jobs:
           usedocker : true
           dontuseforce: true
           docker_heroku_process_type : worker
+      environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/London
+      - WEBUI_PORT=80
