@@ -10,6 +10,10 @@ LABEL maintainer="sparklyballs, thelamer"
 # environment settings
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/config" \
+PUID=0 \
+PGID=0 \
+TZ=Europe/London \
+WEBUI_PORT=80 \
 XDG_CONFIG_HOME="/config" \
 XDG_DATA_HOME="/config"
 
